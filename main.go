@@ -11,6 +11,13 @@ func named_fun_as_goroutine(s string) {
 
 }
 
+//fun with multiple named return values
+func Divide(x, y float64) (q, r float64) {
+	q = math.Trunc(x / y)
+	r = math.Mod(x, y)
+	return
+}
+
 const PI = 3.1415926
 
 var (
@@ -41,6 +48,12 @@ func main() {
 	//split on more than just the space, but all whitespace chars
 	fields := strings.Fields(sentence)
 	fmt.Printf("%v \n", fields)
+
+	/**
+	functions
+	*/
+	q, r := Divide(11, 3)
+	fmt.Printf("Quotient: %v, Remainder %v \n", q, r)
 
 	/**
 	Pointer
