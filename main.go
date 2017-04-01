@@ -36,7 +36,7 @@ func main() {
 
 	sentence := "I'm a sentence made up of	words"
 	words := strings.Split(sentence, " ")
-	fmt.Println("%v \n", words)
+	fmt.Printf("%v \n", words)
 
 	//split on more than just the space, but all whitespace chars
 	fields := strings.Fields(sentence)
