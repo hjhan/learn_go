@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"runtime"
 	"strings"
 )
 
@@ -112,4 +113,11 @@ func main() {
 	fmt.Printf("Sqrt(9)=%f", math.Sqrt(9.0))
 	fmt.Println(len("Hello World"))
 	fmt.Println("Hello World"[1])
+
+	/**
+	runtime
+	*/
+	fmt.Println(runtime.NumCPU())
+	fmt.Println(runtime.GOARCH)
+	fmt.Println(runtime.NumGoroutine())
 }
