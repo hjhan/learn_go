@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"strings"
 )
 
 func named_fun_as_goroutine(s string) {
@@ -25,6 +26,21 @@ func main() {
 	/**
 	Strings
 	*/
+	str := "HI, I'M UPPER CASE"
+	lower := strings.ToLower(str)
+	fmt.Println(lower)
+
+	if strings.Contains(lower, "case") {
+		fmt.Println("Yes, exists!")
+	}
+
+	sentence := "I'm a sentence made up of	words"
+	words := strings.Split(sentence, " ")
+	fmt.Println("%v \n", words)
+
+	//split on more than just the space, but all whitespace chars
+	fields := strings.Fields(sentence)
+	fmt.Printf("%v \n", fields)
 
 	/**
 	Pointer
